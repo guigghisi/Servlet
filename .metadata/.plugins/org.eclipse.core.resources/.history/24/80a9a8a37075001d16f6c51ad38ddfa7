@@ -21,14 +21,7 @@ public class hello extends HttpServlet {
 	private Gson gson = new Gson();
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String id = request.getParameter("id");
-		String json= "";
-		if (id != null) {
-			json = gson.toJson(this.service.getPessoa(Long.parseLong(id)));
-		}else {
-			json = gson.toJson(this.service.getPessoas());
-			
-		}
+	String json = gson.toJson(this.service.getPessoas());
 		response.getWriter().append(json);
 	}
 

@@ -24,7 +24,7 @@ public class hello extends HttpServlet {
 		String id = request.getParameter("id");
 		String json= "";
 		if (id != null) {
-			json = gson.toJson(this.service.getPessoa(Long.parseLong(id)));
+			
 		}else {
 			json = gson.toJson(this.service.getPessoas());
 			
