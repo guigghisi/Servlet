@@ -1,0 +1,8 @@
+package service;
+
+import java.util.ArrayList;
+import model.*;
+public class PessoaService {
+
+	private List<PessoaModel> pessoas = new ArrayList<>();
+}
